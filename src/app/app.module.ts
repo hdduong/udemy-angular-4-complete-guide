@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import {ServerComponent} from './server/server.component';
+import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningAlert} from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { BindingComponent } from './binding/binding.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
     ServerComponent,
     ServersComponent,
     WarningAlert,
-    SuccessAlertComponent
+    SuccessAlertComponent,
+    BindingComponent
   ],
   imports: [
     BrowserModule,

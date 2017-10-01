@@ -1,3 +1,10 @@
+<button id="btnAdd" class="btn btn-primary" [disabled] = "!addServerEnabled"
+(click) = "onAddServerCreated()"
+>Add Server</button>
+
+<p>{{ addServerEnabled }}</p>
+<p>{{ serverCreatedStatus }} </p>
+
 <app-server></app-server>
 <app-server></app-server>
 <app-server></app-server>

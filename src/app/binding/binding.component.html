@@ -1,0 +1,4 @@
+Enter username: <input type="text" [(ngModel)]="username" class="form-control">
+<p>{{ username }}</p>
+<br/>
+<button class="btn btn-default" [disabled]="isUsernameEmpty()" (click)="onBtnAddClick($event)">Add</button>
