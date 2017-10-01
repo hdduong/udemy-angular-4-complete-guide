@@ -1,0 +1,10 @@
+
+<button (click)="toggleParagraph()" class="btn btn-primary">Display Details</button>
+<hr>
+<p *ngIf="toDisplayParagraph()">Bao Tran cua bo hu lam</p>
+
+<div *ngFor="let noClick of numClickRecord">
+    <div [ngStyle]="{backgroundColor:getBackgroundColor(noClick)}"
+        [ngClass]="{biggerFive:getBackgroundColor(noClick)}"
+    >{{ noClick }}</div>
+</div>
