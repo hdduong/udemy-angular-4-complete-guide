@@ -1,11 +1,14 @@
 <div class="container">
-<app-cockpit 
-(serverAdded) = "onServerAdded($event)"
-(blueprintAdded) = "onBlueprintAdded($event)">
-</app-cockpit>
-    <hr>
     <div class="row">
-        <app-server-element *ngFor="let serverElement of serverElements"
-        [serverElement]="serverElement"></app-server-element>
+        <app-game-control (oddNumberEvent)="onNewOddNumberEvent($event)"
+        (evenNumberEvent)="onNewEvenNumberEvent($event)"></app-game-control>
     </div>
+    
+    <app-even *ngFor="let evenNumber of evenNumbers"
+    [evenNumber] = "evenNumber">
+    </app-even>
+
+    <app-odd  *ngFor="let oddNumber of oddNumbers"
+    [oddNumber] = "oddNumber">
+    </app-odd>
 </div>
