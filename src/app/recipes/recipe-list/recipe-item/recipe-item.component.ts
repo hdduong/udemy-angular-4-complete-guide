@@ -13,7 +13,6 @@ export class RecipeItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-   // this.inputRecipe = new Recipe("1","2","3");
   }
 
 }
