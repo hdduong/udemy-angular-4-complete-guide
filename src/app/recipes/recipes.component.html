@@ -1,8 +1,13 @@
 <div class="row">
   <div class="col-md-5">
-      <app-recipe-list></app-recipe-list>
+      <app-recipe-list (outputLoadingRecipe)="onLoadingRecipe($event)"></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail></app-recipe-detail>
+    <app-recipe-detail 
+    *ngIf="selectedRecipe; else  notChoseRecipeText"
+    [inputRecipe]="selectedRecipe"></app-recipe-detail>
+    <ng-template #notChoseRecipeText>
+      <p>Please select a recipie</p>
+    </ng-template>
   </div>
 </div>
